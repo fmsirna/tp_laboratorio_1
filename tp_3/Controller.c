@@ -140,7 +140,7 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
             controller_ListEmployee(pArrayListEmployee);
             utn_getNumero("Ingrese el id del empleado a modificar: \n", "\nError", &id, 2, 0, 99999);
 
-            empleadoAModificar = getEmployeeById(pArrayListEmployee, id);
+            empleadoAModificar = getEmployeeById(pArrayListEmployee, id);  // te trae el empleado del linkedlist con ese id. con el ll get
 
             if(empleadoAModificar != NULL)
             {
@@ -157,16 +157,16 @@ int controller_editEmployee(LinkedList* pArrayListEmployee)
 						{
 						case 1:
 							utn_getString("Ingrese un nuevo nombre: ", "\nError", auxNombre, 0, 51);
-							strncpy(empleadoAModificar->nombre,auxNombre,51);
+							employee_setNombre(empleadoAModificar, auxNombre);
 							break;
 						case 2:
 							utn_getNumero("Ingrese una nueva cantidad de horas trabajadas: ", "\nError", &auxHorasTrabajadas, 2, 0, 99999);
-							empleadoAModificar->horasTrabajadas = auxHorasTrabajadas;
+							employee_setHorasTrabajadas(empleadoAModificar, auxHorasTrabajadas);
 
 							break;
 						case 3:
 							utn_getNumero("Ingrese sueldo: ", "\nError", &auxSueldo, 2, 0, 99999);
-							empleadoAModificar->sueldo = auxSueldo;
+							employee_setSueldo(empleadoAModificar, auxSueldo);
 							break;
 						}
                 	}
