@@ -226,6 +226,7 @@ int controller_removeEmployee(LinkedList* pArrayListEmployee)
                 {
                     indiceEmpleado = ll_indexOf(pArrayListEmployee, auxEmpleado);
                     ll_remove(pArrayListEmployee, indiceEmpleado);
+                    employee_delete(auxEmpleado);
                 }
                 else if(confirmacion == 2)
                 {
