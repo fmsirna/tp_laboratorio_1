@@ -10,6 +10,7 @@
 
 float factorial(float numero, float *resultado);
 float getFloat(char *mensaje, char *mensajeError, float *pResultado,int reintentos,float min, float max);
+int getNumero(char* mensaje, char* mensajeError, int* pResultado,int reintentos,int minimo,int maximo);
 float Suma(float numeroA, float numeroB, float *resultado);
 float Resta(float numeroA, float numeroB, float *resultado);
 float Division(float numeroA, float numeroB, float *resultado);
